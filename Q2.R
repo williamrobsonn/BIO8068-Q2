@@ -21,7 +21,7 @@ carderbee_recs <-  get_inat_obs(taxon_name  = "Bombus pascuorum",
                                 quality = "research",
                                 # month=6,   # Month can be set.
                                 # year=2018, # Year can be set.
-                                maxresults = 700)
+                                maxresults = 600)
 
 #Now to bulk download these images (may take some time) 
 
@@ -36,7 +36,7 @@ redtailed_recs <-  get_inat_obs(taxon_name  = "Bombus lapidarius",
                                 quality = "research",
                                 # month=6,   # Month can be set.
                                 # year=2018, # Year can be set.
-                                maxresults = 700)
+                                maxresults = 600)
 
 #Downloading the images 
 
@@ -49,7 +49,7 @@ bufftailed_recs <-  get_inat_obs(taxon_name  = "Bombus terrestris",
                                 quality = "research",
                                 # month=6,   # Month can be set.
                                 # year=2018, # Year can be set.
-                                maxresults = 700)
+                                maxresults = 600)
 
 #Downloading the images
 
@@ -74,7 +74,7 @@ for(folder in 1:output_n){
 # Now copy over spp_601.jpg to spp_700.jpg using two loops, deleting the photos
 # from the original images folder after the copy
 for(folder in 1:output_n){
-  for(image in 601:700){
+  for(image in 501:600){
     src_image  <- paste0("images/", spp_list[folder], "/spp_", image, ".jpg")
     dest_image <- paste0("test/"  , spp_list[folder], "/spp_", image, ".jpg")
     file.copy(src_image, dest_image)
